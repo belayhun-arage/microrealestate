@@ -9,7 +9,7 @@ const toBoolean = (value) => {
 
 module.exports = {
   ...baseConfig,
-  PORT: process.env.PORT || 8080,
+  PORT: process.env.PORT || 8090,
   businesslogic: 'FR',
   restoreDatabase: toBoolean(process.env.RESTORE_DB || true),
   demoMode: toBoolean(process.env.DEMO_MODE || true),

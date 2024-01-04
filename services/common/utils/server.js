@@ -38,7 +38,6 @@ class Service {
     }
 
     this.express = express();
-
     if (useRequestParsers) {
       this.express.use(cookieParser());
       this.express.use(express.urlencoded({ extended: true }));

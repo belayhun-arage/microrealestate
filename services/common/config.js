@@ -7,7 +7,7 @@ module.exports = {
   MONGO_URL:
     process.env.MONGO_URL ||
     process.env.BASE_DB_URL ||
-    'mongodb://localhost/demodb',
+    'mongodb://localhost:27017/mydatabase',
   REDIS_URL:
     process.env.REDIS_URL ||
     process.env.TOKEN_DB_URL ||
@@ -18,9 +18,8 @@ module.exports = {
   ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET,
   REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET,
   RESET_TOKEN_SECRET: process.env.RESET_TOKEN_SECRET,
-  CIPHER_KEY: process.env.CIPHER_KEY,
-  CIPHER_IV_KEY: process.env.CIPHER_IV_KEY,
-
+  CIPHER_KEY: process.env.CIPHER_KEY || '<Buffer 36 6a 63 2f 72 ce 34 17 38 a5 fb 95 50 8e 6e 5f d5 44 85 03 92 0e 2f 17 cc 76 e4 65 c3 4d 4e 17>',
+  CIPHER_IV_KEY: process.env.CIPHER_IV_KEY || '<Buffer e3 a8 18 cb 1b 9a 13 e4 cf eb b1 93 f9 1f 7d 99>',
   log: function log() {
     const { log, ...config } = this;
     const escapedConfig = _.cloneDeep(config);

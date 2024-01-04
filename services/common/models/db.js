@@ -3,7 +3,6 @@ const logger = require('winston');
 const config = require('../config');
 
 let connection;
-
 const connect = async () => {
   if (!connection) {
     logger.debug(`connecting to ${config.MONGO_URL}...`);

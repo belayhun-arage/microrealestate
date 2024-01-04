@@ -16,6 +16,7 @@ i18n.configure({
 });
 
 async function onStartUp(express) {
+  
   if (config.restoreDatabase) {
     logger.debug('restoring database from backup');
     await restoreDB();
